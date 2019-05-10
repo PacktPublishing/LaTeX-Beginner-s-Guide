@@ -1,0 +1,15 @@
+\documentclass{article}
+\newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
+\setlength{\tabcolsep}{1.8ex}
+\usepackage{booktabs}
+\begin{document}
+\thispagestyle{empty}
+\centering
+\begin{tabular}{*3{c@{~}l}}
+\toprule
+\s. & \s:   & \s\ddots  \\
+\s\cdot & \s\ldots & \s\vdots  \\
+\(\dot{}\) & \verb|\dot{}| & \s\cdots  \\
+\bottomrule
+\end{tabular}
+\end{document}

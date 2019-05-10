@@ -1,0 +1,23 @@
+\documentclass{book}
+\usepackage{varioref}
+\begin{document}
+\chapter{Statistics}
+\section{Introduction}
+\newpage
+\section{Most used packages on arXiv.org}\label{sec:packages}
+The Top Five packages, used on arXiv.org\footnote{according
+to the arXMLiv project\label{fn:project}}:
+\begin{enumerate}
+  \item graphicx
+  \item amssymb \label{item:amssymb}
+  \item amsmath \label{item:amsmath}
+  \item epsfig
+  \item amsfonts
+\end{enumerate}
+\chapter{Mathematics}
+\emph{amsmath}, on position \ref{item:amsmath} of the top list
+in section~\vref{sec:packages}, is indispensable to high-quality
+mathematical typesetting in \LaTeX. \emph{amssymb}, on position
+\ref{item:amssymb}, provides a huge amount of math symbols.
+See also the footnote \vpageref{fn:project}.
+\end{document}

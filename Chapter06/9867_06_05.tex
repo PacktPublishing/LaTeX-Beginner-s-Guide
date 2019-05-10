@@ -1,0 +1,28 @@
+\documentclass{book}
+\usepackage{cleveref}
+\crefname{enumi}{position}{positions}
+\begin{document}
+\chapter{Statistics}\label{stats}
+\section{Most used packages on arXiv.org}\label{packages}
+The Top Five packages, used on arXiv.org\footnote{according
+to the arXMLiv project\label{project}}:
+\begin{enumerate}
+  \item graphicx
+  \item amssymb \label{amssymb}
+  \item amsmath \label{amsmath}
+  \item epsfig
+  \item amsfonts
+\end{enumerate}
+\begin{table}[tp]
+  \centering
+  (Identify obsolete packages on CTAN)
+  \caption{Obsolete packages}\label{obsolete}
+\end{table}
+\chapter{Mathematics}
+\emph{amsmath}, on \cref{amsmath} of the top list in
+\cref{packages} of \cref{stats}, is indispensable to high-quality
+mathematical typesetting in \LaTeX. \emph{amssymb}, on
+\cref{amssymb}, provides a huge amount of math symbols.
+\Cref{obsolete} shows obsolete and outdated packages that
+should be avoided. See also the \cref{project}.
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{book}
+\setcounter{tocdepth}{3}
+\renewcommand{\figurename}{Diagram}
+\renewcommand{\listfigurename}{List of Diagrams}
+\usepackage{index}
+\newcommand{\main}[1]{\emph{#1}}
+\makeindex
+\begin{document}
+\tableofcontents
+\listoffigures 
+\part{First Part}
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\chapter{First main chapter}
+\section{A section}
+\begin{figure}[ht]
+\centering
+\fbox{Diagram placeholder}
+\caption{\index{enterprise}\index{enterprise!organization}Enterprise Organizational Chart}
+\end{figure} 
+\section{Another section}
+\index{enterprise!organization!sales}
+\subsection{A smaller section}
+\subsubsection[Deeper level]{This section has an even deeper level}
+\chapter{Second main chapter}
+\index{enterprise!organization!sales}\index{enterprise!organization!controlling}
+\index{enterprise!organization!operation}
+\part{Second part}
+\chapter{Third main chapter}
+\index{network|(}\index{WLAN|main}
+\addtocontents{lof}{\textbf{Network Diagrams:}}
+\begin{figure}
+\centering
+\fbox{Diagram placeholder}
+\caption{\index{network!overview}Network overview}
+\end{figure}
+\begin{figure}[ht]
+\centering
+\fbox{Diagram placeholder}
+\caption{\index{network!wireless|see{WLAN}}\index{WLAN}WLAN Design}
+\end{figure}
+\index{Gamma@$\Gamma$}
+\clearpage
+\index{network|)}
+\appendix
+\cleardoublepage
+\addtocontents{toc}{\bigskip}
+\addcontentsline{toc}{part}{Appendix}
+\chapter{Glossary}
+\chapter{Symbols}
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\end{document}
