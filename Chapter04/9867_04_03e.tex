@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[shortlabels]{enumitem}
+\begin{document}
+\begin{enumerate}[label=\textcircled{\scriptsize\Alph*},
+    font=\sffamily]
+  \item State the paper size by an option to the document class
+  \item Determine the margin dimensions using one of these packages:
+  \begin{itemize}[label=---,itemsep=-2pt]
+    \item geometry
+    \item typearea
+  \end{itemize}
+  \item Customize header and footer by one of these packages:
+  \begin{itemize}
+    \item fancyhdr
+    \item scrpage2
+  \end{itemize}
+  \item Adjust the line spacing for the whole document
+  \begin{itemize}
+    \item by using the setspace package
+    \item or by the command \verb|\linespread{factor}|
+  \end{itemize}
+\end{enumerate}
+\end{document}

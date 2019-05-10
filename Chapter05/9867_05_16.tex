@@ -1,0 +1,15 @@
+\documentclass[a5paper]{article}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage[demo]{graphicx}
+\usepackage{wrapfig}
+\pagestyle{empty}
+\begin{document}
+\section*{Text flowing around a picture}
+\blindtext
+\begin{wrapfigure}{l}{4.4cm}
+\includegraphics[width=4.4cm]{test}
+\caption{Test figure}
+\end{wrapfigure}
+\blindtext
+\end{document}

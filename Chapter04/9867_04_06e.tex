@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{paralist}
+\begin{document}
+\begin{compactenum}
+  \setcounter{enumi}{3}
+  \item Adjust the line spacing for the whole document
+  \begin{compactitem}
+    \item by using the setspace package and one of its options:
+      \begin{inparaenum}
+      \item singlespacing
+      \item onehalfspacing
+      \item double spacing
+      \end{inparaenum}
+    \item or by the command \verb|\linespread{factor}|
+  \end{compactitem}
+\end{compactenum}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{article}
+\newcommand{\printcounters}[1]{%
+\setcounter{#1}{1}
+\csname label#1\endcsname,
+\stepcounter{#1}
+\csname label#1\endcsname,
+\stepcounter{#1}
+\csname label#1\endcsname,
+\stepcounter{#1}
+\csname label#1\endcsname, \ldots
+}
+\renewcommand{\arraystretch}{1.2}
+\begin{document}
+\thispagestyle{empty}
+\begin{tabular}{ll}
+\textsf{First level:} & \printcounters{enumi}\\
+
+\textsf{Second level:} & \printcounters{enumii}\\
+
+\textsf{Third level:} & \printcounters{enumiii}\\
+
+\textsf{Fourth level:} & \printcounters{enumiv}\\
+\end{tabular}
+\end{document}
