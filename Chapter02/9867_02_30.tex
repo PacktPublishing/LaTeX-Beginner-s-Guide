@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{booktabs}
+\newcommand*\co{\ttfamily\textbackslash}
+\begin{document}
+\sffamily
+\begin{tabular}{cccc}
+\toprule
+\textbf{Command} & \textbf{Output} & \textbf{Command} & \textbf{Output} \\
+\midrule
+\co '\{a\} & \'{a}          & \co u\{a\}     & \u{a} \\
+\co `\{o\} & \`{o}   & \co v\{e\}     & \v{e} \\
+\co \^{ }\{e\} & \^{e} & \co H\{a\}     & \H{a} \\
+\co"\{u\} & \"{u}   & \co t\{oo\}     & \t{oo} \\
+\co\~{}\{n\} & \~{n} & \co c\{c\}     & \c{c} \\
+\co =\{o\} & \={o}   & \co d\{n\}     & \d{n} \\
+\co .\{a\} & \.{a}    & \co b\{i\}     & \b{i} \\
+\bottomrule
+\end{tabular}
+\end{document}
