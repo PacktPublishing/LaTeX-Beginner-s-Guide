@@ -1,0 +1,44 @@
+\documentclass[svgnames]{beamer}
+\setbeamertemplate{background canvas}[vertical shading]%
+  [top=blue!1,bottom=blue!30]
+\setbeamertemplate{navigation symbols}{}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\newcommand*\up{\textcolor{YellowGreen}{$\blacktriangle$}}
+\newcommand*\down{\textcolor{Red}{$\blacktriangledown$}}
+\newcommand*\const{\textcolor{darkgray}{\textbf{--}}}
+\newcommand*\head[1]{\textbf{#1}}
+\newenvironment{matrixtable}[4]{%
+  \begin{tikzpicture}[matrix of nodes/.style={
+    execute at begin cell=\node\bgroup\strut,
+    execute at end cell=\egroup;}]
+  \matrix (m) [matrix of nodes,top color=blue!20,
+    bottom color=blue!80,draw=white,
+    nodes={draw,top color=blue!10,bottom color=blue!35,
+    draw,inner sep=2pt,minimum height=3.1ex},
+    column sep=1ex,row sep=0.6ex,inner sep=2ex,
+    rounded corners,column 1/.style={minimum width=#1},
+    column 2/.style={minimum width=#2},
+    column 3/.style={minimum width=#3},
+    column 4/.style={minimum width=#4}]}%
+{;\end{tikzpicture}}
+\begin{document}
+\begin{frame}[fragile,bg=lightgray]
+\begin{center}
+\begin{matrixtable}{1.2cm}{2.4cm}{1.2cm}{0.6cm}{
+  \head{Rank}   & \head{Distribution} & \head{Hits} & \\
+  1 & Ubuntu    & 2114 & \down  \\
+  2 & Fedora    & 1451 & \up    \\
+  3 & Mint      & 1297 & \const \\
+  4 & OpenSUSE  & 1228 & \up    \\
+  5 & Debian    & 910  & \down  \\
+  6 & Mandriva  & 907  & \up    \\
+  7 & PCLinuxOS & 764  & \up    \\
+  8 & Puppy     & 738  & \up    \\
+  9 & Sabayon   & 671  & \up    \\
+ 10 & Arch      & 625  & \down  \\
+}
+\end{matrixtable}
+\end{center}
+\end{frame}
+\end{document}
